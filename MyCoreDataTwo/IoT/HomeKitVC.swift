@@ -11,5 +11,7 @@ import HomeKit
 
 class HomeAccessory {
     
-    //let lightOn = HMCharacteristic(
+    func testMethodForCommit() {
+        
+    }
 }
