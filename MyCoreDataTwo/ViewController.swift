@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 enum FilterType: String {
     case all = ""
