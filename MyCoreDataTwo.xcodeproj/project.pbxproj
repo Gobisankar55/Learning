@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		448690D52D85C5630060442E /* ToDoItems+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448690D42D85C5630060442E /* ToDoItems+CoreDataProperties.swift */; };
 		448690D62D85C5630060442E /* ToDoItems+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448690D32D85C5630060442E /* ToDoItems+CoreDataClass.swift */; };
+		44AACD312D8ABA1400908C4A /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AACD302D8ABA1400908C4A /* Person+CoreDataProperties.swift */; };
+		44AACD322D8ABA1400908C4A /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AACD2F2D8ABA1400908C4A /* Person+CoreDataClass.swift */; };
+		44AACD362D8AC57000908C4A /* ItemType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AACD342D8AC57000908C4A /* ItemType+CoreDataClass.swift */; };
+		44AACD372D8AC57000908C4A /* ItemType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AACD352D8AC57000908C4A /* ItemType+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,10 @@
 		4486909D2D856EA60060442E /* MyCoreDataTwoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCoreDataTwoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		448690D32D85C5630060442E /* ToDoItems+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoItems+CoreDataClass.swift"; sourceTree = "<group>"; };
 		448690D42D85C5630060442E /* ToDoItems+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoItems+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44AACD2F2D8ABA1400908C4A /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44AACD302D8ABA1400908C4A /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		44AACD342D8AC57000908C4A /* ItemType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataClass.swift"; sourceTree = "<group>"; };
+		44AACD352D8AC57000908C4A /* ItemType+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -95,6 +103,10 @@
 		448690742D856EA60060442E = {
 			isa = PBXGroup;
 			children = (
+				44AACD342D8AC57000908C4A /* ItemType+CoreDataClass.swift */,
+				44AACD352D8AC57000908C4A /* ItemType+CoreDataProperties.swift */,
+				44AACD2F2D8ABA1400908C4A /* Person+CoreDataClass.swift */,
+				44AACD302D8ABA1400908C4A /* Person+CoreDataProperties.swift */,
 				448690D32D85C5630060442E /* ToDoItems+CoreDataClass.swift */,
 				448690D42D85C5630060442E /* ToDoItems+CoreDataProperties.swift */,
 				4486907F2D856EA60060442E /* MyCoreDataTwo */,
@@ -259,6 +271,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				448690D52D85C5630060442E /* ToDoItems+CoreDataProperties.swift in Sources */,
+				44AACD362D8AC57000908C4A /* ItemType+CoreDataClass.swift in Sources */,
+				44AACD372D8AC57000908C4A /* ItemType+CoreDataProperties.swift in Sources */,
+				44AACD312D8ABA1400908C4A /* Person+CoreDataProperties.swift in Sources */,
+				44AACD322D8ABA1400908C4A /* Person+CoreDataClass.swift in Sources */,
 				448690D62D85C5630060442E /* ToDoItems+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

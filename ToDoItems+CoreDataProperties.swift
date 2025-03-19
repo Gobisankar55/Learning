@@ -2,7 +2,7 @@
 //  ToDoItems+CoreDataProperties.swift
 //  MyCoreDataTwo
 //
-//  Created by Gobisankar M M on 16/03/25.
+//  Created by Gobisankar M M on 19/03/25.
 //
 //
 
@@ -24,7 +24,7 @@ extension ToDoItems {
 
     @NSManaged public var itemAddedAt: Date?
     @NSManaged public var name: String?
-    @NSManaged public var type: String?
+    @NSManaged public var itemType: ItemType?
 
 }
 

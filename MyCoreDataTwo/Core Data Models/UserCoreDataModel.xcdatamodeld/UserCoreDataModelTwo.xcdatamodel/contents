@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="24D2082" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ItemType" representedClassName="ItemType" syncable="YES">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="toDoItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ToDoItems" inverseName="itemType" inverseEntity="ToDoItems"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
     <entity name="Person" representedClassName="Person" syncable="YES">
         <attribute name="name" attributeType="String" minValueString="2"/>
     </entity>
     <entity name="ToDoItems" representedClassName="ToDoItems" syncable="YES">
         <attribute name="itemAddedAt" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
-        <attribute name="type" attributeType="String"/>
+        <relationship name="itemType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemType" inverseName="toDoItem" inverseEntity="ItemType"/>
     </entity>
 </model>

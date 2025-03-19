@@ -22,7 +22,7 @@ class ToDoItemCell: UITableViewCell {
     var item: ToDoItems? {
         didSet {
             lblName.text = item?.name ?? ""
-            lblItemType.text = item?.type ?? "-"
+            lblItemType.text = item?.itemType?.name ?? ""
         }
     }
     
@@ -59,8 +59,8 @@ class ToDoItemCell: UITableViewCell {
 
 class ViewController: UIViewController {
 
-    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    //let context = CoreDataStack.sharedInstance.mainContext
     
     private let utility = Utilities.shared
     private let tableView = UITableView()
@@ -235,7 +235,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
         alertController.addTextField { typeField in
             typeField.placeholder = "Enter type here"
-            typeField.text = selectedItem.type
+            typeField.text = selectedItem.itemType?.name
         }
         //alertController.textFields?.first?.text = selectedItem.name
         
@@ -289,7 +289,7 @@ extension ViewController {
         let newItem = ToDoItems(context: context)
         newItem.name = itemName
         newItem.itemAddedAt = Date()
-        newItem.type = itemType
+        newItem.itemType?.name = itemType
         
         updateCoreData()
     }
@@ -297,7 +297,7 @@ extension ViewController {
     private func updateItem(item: ToDoItems, newItem: String, newType: String) {
         
         item.name = newItem
-        item.type = newItem
+        item.itemType?.name = newItem
         
         updateCoreData()
     }
@@ -313,13 +313,17 @@ extension ViewController {
     
     private func updateCoreData() {
         
-        do {
-            try context.save()
-            
-            fetchAllItems()
-            
-        } catch {
-            print("Err in save to do items", error.localizedDescription)
-        }
+        CoreDataStack.sharedInstance.saveContext()
+        
+        fetchAllItems()
+        
+//        do {
+//            try context.save()
+//            
+//            fetchAllItems()
+//            
+//        } catch {
+//            print("Err in save to do items", error.localizedDescription)
+//        }
     }
 }
